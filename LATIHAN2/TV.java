@@ -4,52 +4,52 @@ public class TV {
     boolean on;
 
     TV() {
-        channel = 1;
-        volumeLevel = 1;
-        on = false;
+        this.channel = 1;
+        this.volumeLevel = 1;
+        this.on = false;
     }
 
     public void turnOn() {
-        on = true;
+        this.on = true;
     }
 
     public void turnOff() {
-        on = false;
+        this.on = false;
     }
 
     public void setChannel(int newChannel) {
-        if (on && newChannel >= 1 && newChannel <= 120) {
-            channel = newChannel;
+        if (this.on && newChannel >= 1 && newChannel <= 120) {
+            this.channel = newChannel;
         }
     }
 
     public void setVolume(int newVolumeLevel) {
-        if (on && newVolumeLevel >= 1 && newVolumeLevel <= 7) {
-            volumeLevel = newVolumeLevel;
+        if (this.on && newVolumeLevel >= 1 && newVolumeLevel <= 7) {
+            this.volumeLevel = newVolumeLevel;
         }
     }
 
     public void channelUp() {
-        if (on && channel < 120) {
-            channel++;
+        if (this.on && this.channel < 120) {
+            this.channel++;
         }
     }
 
     public void channelDown() {
-        if (on && channel > 1) {
-            channel--;
+        if (this.on && this.channel > 1) {
+            this.channel--;
         }
     }
 
     public void volumeUp() {
-        if (on && volumeLevel < 7) {
-            volumeLevel++;
+        if (this.on && this.volumeLevel < 7) {
+            this.volumeLevel++;
         }
     }
 
     public void volumeDown() {
-        if (on && volumeLevel > 1) {
-            volumeLevel--;
+        if (this.on && this.volumeLevel > 1) {
+            this.volumeLevel--;
         }
     }
 }
